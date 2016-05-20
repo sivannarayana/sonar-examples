@@ -1,13 +1,19 @@
-This example demonstrates how to analyze a C project with the SonarQube Runner.
+This example demonstrates how to analyze a C project with the SonarQube Scanner.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
-* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
-* [SonarSource C/C++ Plugin](http://www.sonarsource.com/products/plugins/languages/cpp/) 3.8+
+* GCC compiler to compile the project sample
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) 2.6.1+
+* [SonarSource C/C++ Plugin](http://www.sonarsource.com/products/plugins/languages/cpp/) 3.11+
+* [SonarSource Build Wrapper](http://www.sonarsource.com/products/plugins/languages/cpp/) 3.11+
 
 Usage
 =====
-* Analyze the project with SonarQube using the SonarQube Runner:
+* Run the build wrapper:
 
-        sonar-runner
+        build-wrapper --out-dir bw-outputs ./build.sh
+
+* Analyze the project with SonarQube using the SonarQube Scanner:
+
+        sonar-scanner
